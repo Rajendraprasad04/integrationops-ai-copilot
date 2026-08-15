@@ -26,11 +26,13 @@ services:
       - key: CORS_ORIGINS
         value: "*"
 
-# =========================================================================
-# 2. React + Vite Frontend Static Site
-# =========================================================================
-staticSites:
-  - name: integrationops-frontend
+  # =========================================================================
+  # 2. React + Vite Frontend Static Site
+  # =========================================================================
+  - type: web
+    name: integrationops-frontend
+    env: static
+    plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
