@@ -1,0 +1,48 @@
+# Render Blueprint Specification for IntegrationOps AI Copilot
+# Deploying FastAPI Backend (Web Service) and React Frontend (Static Site)
+
+services:
+  # =========================================================================
+  # 1. FastAPI Backend Service
+  # =========================================================================
+  - type: web
+    name: integrationops-backend
+    runtime: python
+    region: oregon
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: DATA_DIR
+        value: ./data
+      - key: LLM_PROVIDER
+        value: mock
+      - key: CORS_ORIGINS
+        value: "*"
+
+  # =========================================================================
+  # 2. React + Vite Frontend Static Site
+  # =========================================================================
+  - type: web
+    name: integrationops-frontend
+    runtime: static
+    region: oregon
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: integrationops-backend
+          property: host
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

@@ -217,16 +217,36 @@ cd backend
 
 ---
 
-## Free-Tier Deployment Guide
+---
 
-The application is engineered for zero-cost deployment on free-tier container platforms:
+## Deployment
 
-1. **Backend Deployment (Render / Railway / HuggingFace Spaces)**:
-   - Build container using standard Python 3.13 slim image.
-   - Set environment variables: `PORT=8000`, `ENVIRONMENT=production`, `LLM_PROVIDER=mock`.
-2. **Frontend Deployment (Vercel / Netlify / Cloudflare Pages)**:
-   - Build output directory: `frontend/dist`.
-   - Set build environment variable: `VITE_API_BASE_URL=https://your-backend-api.onrender.com`.
+The application includes a [`render.yaml`](file:///C:/Users/kraje/.gemini/antigravity-ide/scratch/integrationops-ai/render.yaml) Blueprint file for zero-cost deployment on [Render](https://render.com). For complete step-by-step instructions, see [`docs/DEPLOYMENT.md`](file:///C:/Users/kraje/.gemini/antigravity-ide/scratch/integrationops-ai/docs/DEPLOYMENT.md).
+
+### 1. Backend (Render Web Service)
+- **Service Type**: Render Web Service (Python 3.13)
+- **Build Command**: `pip install -r requirements.txt`
+- **Start Command**: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+- **Health Check Path**: `/health`
+- **Environment Variables**:
+  - `PORT`: *(Auto-assigned by Render)*
+  - `HOST`: `0.0.0.0`
+  - `ENVIRONMENT`: `production`
+  - `DATA_DIR`: `./data`
+  - `LLM_PROVIDER`: `mock` *(or `openai` / `gemini` if providing API keys)*
+  - `CORS_ORIGINS`: `*` *(or specific Render frontend URL)*
+
+### 2. Frontend (Render Static Site)
+- **Service Type**: Render Static Site
+- **Root Directory**: `frontend`
+- **Build Command**: `npm install && npm run build`
+- **Publish Directory**: `dist`
+- **Environment Variables**:
+  - `VITE_API_BASE_URL`: `https://integrationops-backend.onrender.com`
+
+### 3. Free-Tier Behavioral Limitations
+- **Cold Start Spin-Down**: Render's free Web Services sleep after 15 minutes of inactivity. Initial requests after a sleep period take 30–50 seconds to wake up the Python backend process. Subsequent queries respond in ~1.5 ms.
+- **Portfolio Scope**: Designed as an independent AI engineering portfolio demonstration rather than an SLA-backed production service.
 
 ---
 
