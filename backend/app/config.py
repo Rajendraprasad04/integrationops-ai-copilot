@@ -1,6 +1,7 @@
 """Centralized Application Configuration."""
 
 import logging
+from typing import Union
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -30,12 +31,7 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: str = ""
     GEMINI_API_KEY: str = ""
     LLM_MODEL_NAME: str = "gpt-4o-mini"
-    CORS_ORIGINS: list[str] = [
-        "http://localhost:3000",
-        "http://localhost:5173",
-        "http://127.0.0.1:3000",
-        "http://127.0.0.1:5173",
-    ]
+    CORS_ORIGINS: Union[list[str], str] = "*"
 
 
 settings = Settings()
