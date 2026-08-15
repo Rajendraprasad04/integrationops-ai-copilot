@@ -29,10 +29,8 @@ services:
   # =========================================================================
   # 2. React + Vite Frontend Static Site
   # =========================================================================
-  - type: web
+  - type: static
     name: integrationops-frontend
-    runtime: static
-    plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
