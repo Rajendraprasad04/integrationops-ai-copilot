@@ -1,0 +1,222 @@
+[
+  {
+    "job_id": "JOB-1001",
+    "integration": "salesforce_postgres",
+    "status": "FAILED",
+    "started_at": "2026-08-15T02:00:00Z",
+    "completed_at": "2026-08-15T02:03:15Z",
+    "records_processed": 1450,
+    "records_failed": 120,
+    "service": "Publisher",
+    "error_message": "Destination validation failed: target table schema mismatch on column 'customer_email'"
+  },
+  {
+    "job_id": "JOB-1002",
+    "integration": "salesforce_postgres",
+    "status": "SUCCESS",
+    "started_at": "2026-08-15T00:00:00Z",
+    "completed_at": "2026-08-15T00:02:40Z",
+    "records_processed": 1570,
+    "records_failed": 0,
+    "service": "Publisher",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1003",
+    "integration": "github_bigquery",
+    "status": "SUCCESS",
+    "started_at": "2026-08-15T00:00:00Z",
+    "completed_at": "2026-08-15T00:08:12Z",
+    "records_processed": 42300,
+    "records_failed": 0,
+    "service": "AuditExtractor",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1004",
+    "integration": "servicenow_postgres",
+    "status": "SUCCESS",
+    "started_at": "2026-08-15T01:45:00Z",
+    "completed_at": "2026-08-15T01:46:10Z",
+    "records_processed": 340,
+    "records_failed": 0,
+    "service": "IncidentSync",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1005",
+    "integration": "servicenow_postgres",
+    "status": "FAILED",
+    "started_at": "2026-08-15T02:00:00Z",
+    "completed_at": "2026-08-15T02:00:45Z",
+    "records_processed": 50,
+    "records_failed": 50,
+    "service": "OAuthClient",
+    "error_message": "Authentication failed: OAuth access token expired or revoked"
+  },
+  {
+    "job_id": "JOB-1006",
+    "integration": "stripe_kafka",
+    "status": "SUCCESS",
+    "started_at": "2026-08-15T01:55:00Z",
+    "completed_at": "2026-08-15T01:55:05Z",
+    "records_processed": 890,
+    "records_failed": 0,
+    "service": "WebhookIngest",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1007",
+    "integration": "datadog_postgres",
+    "status": "SUCCESS",
+    "started_at": "2026-08-15T02:05:00Z",
+    "completed_at": "2026-08-15T02:05:22Z",
+    "records_processed": 12000,
+    "records_failed": 0,
+    "service": "MetricsCollector",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1008",
+    "integration": "salesforce_postgres",
+    "status": "FAILED",
+    "started_at": "2026-08-14T22:00:00Z",
+    "completed_at": "2026-08-14T22:01:10Z",
+    "records_processed": 0,
+    "records_failed": 0,
+    "service": "Connector",
+    "error_message": "Connection timeout: Unable to reach Salesforce REST API endpoint"
+  },
+  {
+    "job_id": "JOB-1009",
+    "integration": "github_bigquery",
+    "status": "SUCCESS",
+    "started_at": "2026-08-14T00:00:00Z",
+    "completed_at": "2026-08-14T00:07:45Z",
+    "records_processed": 39800,
+    "records_failed": 0,
+    "service": "AuditExtractor",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1010",
+    "integration": "stripe_kafka",
+    "status": "FAILED",
+    "started_at": "2026-08-15T01:30:00Z",
+    "completed_at": "2026-08-15T01:30:12Z",
+    "records_processed": 210,
+    "records_failed": 15,
+    "service": "EventProducer",
+    "error_message": "Kafka topic partition write error: LeaderNotAvailableException"
+  },
+  {
+    "job_id": "JOB-1011",
+    "integration": "servicenow_postgres",
+    "status": "SUCCESS",
+    "started_at": "2026-08-15T01:30:00Z",
+    "completed_at": "2026-08-15T01:31:05Z",
+    "records_processed": 290,
+    "records_failed": 0,
+    "service": "IncidentSync",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1012",
+    "integration": "datadog_postgres",
+    "status": "SUCCESS",
+    "started_at": "2026-08-15T02:00:00Z",
+    "completed_at": "2026-08-15T02:00:19Z",
+    "records_processed": 11850,
+    "records_failed": 0,
+    "service": "MetricsCollector",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1013",
+    "integration": "salesforce_postgres",
+    "status": "SUCCESS",
+    "started_at": "2026-08-14T20:00:00Z",
+    "completed_at": "2026-08-14T20:02:50Z",
+    "records_processed": 1490,
+    "records_failed": 0,
+    "service": "Publisher",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1014",
+    "integration": "stripe_kafka",
+    "status": "SUCCESS",
+    "started_at": "2026-08-15T01:40:00Z",
+    "completed_at": "2026-08-15T01:40:04Z",
+    "records_processed": 760,
+    "records_failed": 0,
+    "service": "WebhookIngest",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1015",
+    "integration": "datadog_postgres",
+    "status": "FAILED",
+    "started_at": "2026-08-15T01:55:00Z",
+    "completed_at": "2026-08-15T01:55:30Z",
+    "records_processed": 500,
+    "records_failed": 250,
+    "service": "DBWriter",
+    "error_message": "PostgreSQL error: deadlocks detected on table 'ops_metrics_5m'"
+  },
+  {
+    "job_id": "JOB-1016",
+    "integration": "servicenow_postgres",
+    "status": "SUCCESS",
+    "started_at": "2026-08-15T01:15:00Z",
+    "completed_at": "2026-08-15T01:16:02Z",
+    "records_processed": 310,
+    "records_failed": 0,
+    "service": "IncidentSync",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1017",
+    "integration": "salesforce_postgres",
+    "status": "SUCCESS",
+    "started_at": "2026-08-14T18:00:00Z",
+    "completed_at": "2026-08-14T18:02:35Z",
+    "records_processed": 1620,
+    "records_failed": 0,
+    "service": "Publisher",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1018",
+    "integration": "github_bigquery",
+    "status": "SUCCESS",
+    "started_at": "2026-08-13T00:00:00Z",
+    "completed_at": "2026-08-13T00:08:00Z",
+    "records_processed": 41100,
+    "records_failed": 0,
+    "service": "AuditExtractor",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1019",
+    "integration": "stripe_kafka",
+    "status": "SUCCESS",
+    "started_at": "2026-08-15T01:50:00Z",
+    "completed_at": "2026-08-15T01:50:06Z",
+    "records_processed": 940,
+    "records_failed": 0,
+    "service": "WebhookIngest",
+    "error_message": null
+  },
+  {
+    "job_id": "JOB-1020",
+    "integration": "datadog_postgres",
+    "status": "SUCCESS",
+    "started_at": "2026-08-15T01:50:00Z",
+    "completed_at": "2026-08-15T01:50:20Z",
+    "records_processed": 11920,
+    "records_failed": 0,
+    "service": "MetricsCollector",
+    "error_message": null
+  }
+]

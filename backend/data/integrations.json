@@ -1,0 +1,52 @@
+[
+  {
+    "integration_id": "salesforce_postgres",
+    "name": "Salesforce CRM to PostgreSQL Sync",
+    "source_system": "Salesforce CRM",
+    "destination_system": "PostgreSQL Warehouse",
+    "schedule": "0 */2 * * *",
+    "status": "DEGRADED",
+    "owner_email": "ops-team@synthetic-ops.io",
+    "created_at": "2026-01-15T08:00:00Z"
+  },
+  {
+    "integration_id": "github_bigquery",
+    "name": "GitHub Audit Logs to Data Warehouse",
+    "source_system": "GitHub Enterprise",
+    "destination_system": "BigQuery Data Warehouse",
+    "schedule": "0 0 * * *",
+    "status": "HEALTHY",
+    "owner_email": "security-ops@synthetic-ops.io",
+    "created_at": "2026-02-01T10:30:00Z"
+  },
+  {
+    "integration_id": "servicenow_postgres",
+    "name": "ServiceNow ITSM Incident Ingest",
+    "source_system": "ServiceNow ITSM",
+    "destination_system": "PostgreSQL Analytics DB",
+    "schedule": "*/15 * * * *",
+    "status": "HEALTHY",
+    "owner_email": "itsm-admin@synthetic-ops.io",
+    "created_at": "2026-01-20T14:15:00Z"
+  },
+  {
+    "integration_id": "stripe_kafka",
+    "name": "Stripe Payment Events to Event Bus",
+    "source_system": "Stripe Webhooks",
+    "destination_system": "Kafka Stream Cluster",
+    "schedule": "REALTIME",
+    "status": "HEALTHY",
+    "owner_email": "payments-dev@synthetic-ops.io",
+    "created_at": "2026-03-05T11:00:00Z"
+  },
+  {
+    "integration_id": "datadog_postgres",
+    "name": "Datadog Metrics to PostgreSQL Ops Store",
+    "source_system": "Datadog Metrics API",
+    "destination_system": "PostgreSQL Ops DB",
+    "schedule": "*/5 * * * *",
+    "status": "HEALTHY",
+    "owner_email": "platform-eng@synthetic-ops.io",
+    "created_at": "2026-02-10T09:45:00Z"
+  }
+]
