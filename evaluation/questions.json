@@ -1,0 +1,63 @@
+[
+  {
+    "id": "eval-01",
+    "question": "Why can an integration job fail during publishing?",
+    "expected_concepts": [
+      "schema mismatch",
+      "validation",
+      "column"
+    ],
+    "expected_source_documents": [
+      "publishing.md",
+      "error-handling.md"
+    ]
+  },
+  {
+    "id": "eval-02",
+    "question": "How does normalization transform Salesforce contacts?",
+    "expected_concepts": [
+      "full_name",
+      "customer_email",
+      "UTC"
+    ],
+    "expected_source_documents": [
+      "normalization.md"
+    ]
+  },
+  {
+    "id": "eval-03",
+    "question": "What authentication methods does IngestEngine use?",
+    "expected_concepts": [
+      "OAuth",
+      "Personal Access Tokens",
+      "refresh tokens"
+    ],
+    "expected_source_documents": [
+      "data-collection.md"
+    ]
+  },
+  {
+    "id": "eval-04",
+    "question": "How are concurrent integration job runs handled by the scheduler?",
+    "expected_concepts": [
+      "concurrent",
+      "SKIPPED",
+      "cron"
+    ],
+    "expected_source_documents": [
+      "scheduler.md"
+    ]
+  },
+  {
+    "id": "eval-05",
+    "question": "How do you recover from an EX_SCHEMA_VALIDATION_ERROR?",
+    "expected_concepts": [
+      "ALTER TABLE",
+      "column size",
+      "re-run"
+    ],
+    "expected_source_documents": [
+      "error-handling.md"
+    ]
+  }
+]
