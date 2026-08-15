@@ -37,10 +37,7 @@ services:
     staticPublishPath: dist
     envVars:
       - key: VITE_API_BASE_URL
-        fromService:
-          type: web
-          name: integrationops-backend
-          property: host
+        value: https://integrationops-backend.onrender.com
     routes:
       - type: rewrite
         source: /*
