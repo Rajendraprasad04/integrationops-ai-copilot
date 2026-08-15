@@ -3,7 +3,7 @@
 
 services:
   # =========================================================================
-  # 1. FastAPI Backend Service
+  # 1. FastAPI Backend Web Service
   # =========================================================================
   - type: web
     name: integrationops-backend
@@ -26,11 +26,11 @@ services:
       - key: CORS_ORIGINS
         value: "*"
 
-  # =========================================================================
-  # 2. React + Vite Frontend Static Site
-  # =========================================================================
-  - type: static
-    name: integrationops-frontend
+# =========================================================================
+# 2. React + Vite Frontend Static Site
+# =========================================================================
+staticSites:
+  - name: integrationops-frontend
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
